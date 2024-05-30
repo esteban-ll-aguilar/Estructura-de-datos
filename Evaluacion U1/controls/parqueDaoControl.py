@@ -28,7 +28,7 @@ class ParqueDaoControl(DaoAdapter):
     def merge(self, pos):
         self._merge(self.__parque, pos)
         
+    def delete(self, pos):
+        self._delete(pos)
         
-    def editar(self, pos):
-        self._merge(self.__parque, pos)
-        
+

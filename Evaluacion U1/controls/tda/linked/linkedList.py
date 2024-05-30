@@ -146,7 +146,6 @@ class Linked_List(object):
             node_last = node_preview._next._next
             node_preview._next = node_last
             self.__length -= 1
-            
         for i in range(pos, self._length):
             self.getNode(i)._data._id = i+1
     

@@ -11,6 +11,31 @@ body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
 }
+.text-center-em {
+  display: block;
+  text-align: center;
+}
+
+.a_regresar {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+a.a_regresar:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004f9a;
+}
 
 .bgimg {
   background-position: center;
@@ -22,6 +47,8 @@ body, html {
 .menu {
   display: none;
 }
+
+{% block style %}{% endblock %}
 </style>
 </head>
 <body>
@@ -44,7 +71,7 @@ body, html {
     <span class="w3-tag">Open from 6am to 5pm</span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">{% block parque %}Bienvenido{% endblock %} </span>
+    <span class="w3-text-white" style="font-size:90px">{% block parque_img %}Bienvenido{% endblock %} </span>
   </div>
   <div class="w3-display-bottomright w3-center w3-padding-large">
     <span class="w3-text-white">15 Adr street, 5015</span>
@@ -56,8 +83,16 @@ body, html {
 
 <!-- About Container -->
 <div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    {% block content %}{% endblock %}
+  <div class="w3-content" >
+    {% block content %}
+    <div style="margin-top: 50px;">
+      <p>Este es un sistema de registro de parques, en el cual se puede registrar un parque con su respectiva dirección y ubicación GPS.</p>
+      <p style="text-align: center;"> Los botones se encuentran en la parte superior de la página.</p>
+      <p>Para registrar un parque, haga clic en el botón "Registrar un Parque".</p>
+      <p>Para visualizar los parques registrados, haga clic en el botón "Ver Parques".</p>
+    </div>
+
+    {% endblock %}
   </div>
 </div>
 
